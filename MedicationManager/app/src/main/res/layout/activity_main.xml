@@ -13,6 +13,92 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintVertical_bias="0.256" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="41dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageSun"
+        android:text="S"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="41dp"
+        android:layout_height="66dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="-3dp"
+        android:onClick="sendMessageMon"
+        android:text="M"
+        app:layout_constraintLeft_toRightOf="@+id/button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="44dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageTues"
+        android:text="T"
+        app:layout_constraintLeft_toRightOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="46dp"
+        android:layout_height="67dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageWed"
+        android:text="W"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/button3"
+        app:layout_constraintRight_toLeftOf="@+id/button12"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="47dp"
+        android:layout_height="67dp"
+        android:layout_marginRight="-12dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageThus"
+        android:text="T"
+        app:layout_constraintRight_toLeftOf="@+id/button13"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="183dp" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="42dp"
+        android:layout_height="67dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageFri"
+        android:text="F"
+        app:layout_constraintRight_toLeftOf="@+id/button14"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button14"
+        android:layout_width="47dp"
+        android:layout_height="67dp"
+        android:layout_marginRight="-11dp"
+        android:layout_marginTop="0dp"
+        android:onClick="sendMessageSat"
+        android:text="S"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
 </android.support.constraint.ConstraintLayout>
+
+
