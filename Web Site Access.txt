@@ -1,0 +1,6 @@
+Name while waiting for DNS to distribute (impacts only UWF Networks at this time)
+http://uwfcodefest.org.45-56-97-137.computerhelp.ourcontrolpanel.com/
+
+
+Name the rest of the world uses right now.
+www.uwfcodefest.org
