@@ -71,4 +71,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void sendMessageMyMeds(View view) {
+        Intent i = new Intent(getApplicationContext(), myMeds.class);
+        startActivity(i);
+
+    }
 }
