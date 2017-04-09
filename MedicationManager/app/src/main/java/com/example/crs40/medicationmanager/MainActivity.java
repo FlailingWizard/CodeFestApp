@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import static android.R.id.message;
 
+
+
+
+//main activity
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,12 +21,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().getDecorView().setBackgroundColor(Color.rgb(52, 152, 219));
-        //.text.setTextColor(Color.RED);
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     /** Called when the user taps the Send button */
+
+
     public void sendMessageSun(View view) {
         Intent i = new Intent(getApplicationContext(), DayActivity.class);
 
@@ -30,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
 
     }
+
+
     public void sendMessageMon(View view) {
         Intent i = new Intent(getApplicationContext(), DayActivity.class);
 
