@@ -26,7 +26,10 @@ if ( $option == 1 ) {
 }
 
 header('Content-type: application/json');
-echo json_encode( $data );
+// echo json_encode( $data );
+$result = json_encode( $data );
+echo 'The JSON representation is:'.$result.'<br>';
+
 ?>
 </body>
 
