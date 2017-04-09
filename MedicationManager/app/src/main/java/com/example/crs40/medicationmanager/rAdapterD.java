@@ -74,7 +74,6 @@ public class rAdapterD extends RecyclerView.Adapter<rAdapterD.medsHolderd>{
             super(v);
 
             mMedName = (TextView) v.findViewById(R.id.medName);
-
             mRootLayout = (LinearLayout) v.findViewById(R.id.rootLayout);
 
         }

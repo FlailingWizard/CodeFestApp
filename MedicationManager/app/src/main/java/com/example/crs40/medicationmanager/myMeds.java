@@ -1,6 +1,8 @@
 package com.example.crs40.medicationmanager;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,16 +13,30 @@ import java.util.ArrayList;
 
 public class myMeds extends AppCompatActivity {
 
+
     ArrayList<Meds> meds = createArrayList();
     private RecyclerView mRV;
     private LinearLayoutManager mLL;
     private rAdapter rA;
+    static final int PICK_CONTACT_REQUEST = 1;
 
     public void deleteThis(View view) {
         Intent i = new Intent(getApplicationContext(), delete.class);
-        i.putExtra("mylist", meds);
-        startActivity(i);
+        i.putParcelableArrayListExtra("key", meds);
+        startActivityForResult(i, PICK_CONTACT_REQUEST);
 
+
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Check which request we're responding to
+        if (requestCode == PICK_CONTACT_REQUEST) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                Uri contactUri = data.getData();
+                //meds = (ArrayList<Meds>) contactUri;
+            }
+        }
     }
 
     @Override
