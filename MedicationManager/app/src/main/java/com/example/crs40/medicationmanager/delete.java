@@ -1,37 +1,29 @@
 package com.example.crs40.medicationmanager;
 
-import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import java.util.ArrayList;
 
-public class myMeds extends AppCompatActivity {
-
-    ArrayList<Meds> meds = createArrayList();
+public class delete extends AppCompatActivity {
     private RecyclerView mRV;
     private LinearLayoutManager mLL;
-    private rAdapter rA;
-
-    public void deleteThis(View view) {
-        Intent i = new Intent(getApplicationContext(), delete.class);
-        i.putExtra("mylist", meds);
-        startActivity(i);
-
-    }
+    private rAdapterD rA;
+    //Bundle extras = getIntent().getExtras();
+    //ArrayList<Meds> myList = (ArrayList<Meds>) extras.getSerializableExtra("mylist");
+    ArrayList<Meds> myList = new ArrayList<Meds>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_meds);
-
-
+        setContentView(R.layout.activity_delete);
+        getWindow().getDecorView().setBackgroundColor(Color.rgb(52, 152, 219));
         RecyclerView recList = (RecyclerView) findViewById(R.id.meds);
         recList.setHasFixedSize(true);
-        rA = new rAdapter(meds);
+        rA = new rAdapterD(myList);
         recList.setAdapter(rA);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
@@ -42,14 +34,6 @@ public class myMeds extends AppCompatActivity {
         mRV.setLayoutManager(mLL);
 
     }
-
-    public void sendMessageAddDrug(View view) {
-
-
-
-    }
-
-
 
     public ArrayList<Meds> createArrayList()
     {

@@ -15,67 +15,66 @@ import java.util.ArrayList;
  * Created by Test on 4/8/2017.
  */
 
-public class rAdapter extends RecyclerView.Adapter<rAdapter.medsHolder>{
+public class rAdapterD extends RecyclerView.Adapter<rAdapterD.medsHolderd>{
 
 
     public ArrayList<Meds> mMedsList;
-        public rAdapter() {
+    public rAdapterD() {
 
-        }
-        public rAdapter(ArrayList<Meds> meds) {
-            this.mMedsList = meds;
-            }
-
-    // MUST-HAVE METHOD FOR CUSTOM ADAPTER
-    @Override
-    public medsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View row = LayoutInflater.from(parent.getContext() )
-                .inflate(R.layout.row, parent, false);
-        return new medsHolder(row);
+    }
+    public rAdapterD(ArrayList<Meds> meds) {
+        this.mMedsList = meds;
     }
 
     // MUST-HAVE METHOD FOR CUSTOM ADAPTER
     @Override
-    public void onBindViewHolder(medsHolder medsViewHolder, int i) {
+    public medsHolderd onCreateViewHolder(ViewGroup parent, int viewType) {
+        View drow = LayoutInflater.from(parent.getContext() )
+                .inflate(R.layout.drow, parent, false);
+        return new medsHolderd(drow);
+    }
+
+    // MUST-HAVE METHOD FOR CUSTOM ADAPTER
+    @Override
+    public void onBindViewHolder(medsHolderd medsViewHolder, int i) {
 
         // Retrieve the device in the position specified by the holder
         Meds medication = mMedsList.get(medsViewHolder.getAdapterPosition());
         medsViewHolder.mMedName.setText(medication.medicationName);
-        medsViewHolder.mMedNumber.setText(String.valueOf(medication.medicationAmount));
+
 
     }
 
-            //methods required to make adapter
+    //methods required to make adapter
     @Override
     public int getItemCount(){
         return mMedsList.size();
     }
- //   @Override
+    //   @Override
     public long getItemID(int position){
         return position;
     }
 
-  //  @Override
+    //  @Override
     public int getItemView(int position){
         return position;
     }
 
 
 
-    public static class medsHolder extends RecyclerView.ViewHolder {
+    public static class medsHolderd extends RecyclerView.ViewHolder {
 
         private TextView mMedName;
-        private TextView mMedNumber;
-        private TextView mItemDescription;
+
         private LinearLayout mRootLayout;
 
 
 
-       public medsHolder(View v) {
+        public medsHolderd(View v) {
             super(v);
 
             mMedName = (TextView) v.findViewById(R.id.medName);
-            mMedNumber = (TextView) v.findViewById(R.id.medNumber);
+
             mRootLayout = (LinearLayout) v.findViewById(R.id.rootLayout);
 
         }

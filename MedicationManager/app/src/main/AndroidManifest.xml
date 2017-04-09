@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".DayActivity" />
-        <activity android:name=".myMeds"></activity>
+        <activity android:name=".myMeds" />
+        <activity android:name=".delete"></activity>
     </application>
 
 </manifest>
